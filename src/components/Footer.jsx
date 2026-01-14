@@ -58,7 +58,7 @@ const Footer = () => {
             </li>
             <li className="flex items-center gap-3">
               <FaEnvelope className="text-primary" />
-              <a href="mailto:info@nadconference.com" className="hover:text-white">info@nadconference.com</a>
+              <a href="mailto:admin@edodeltanad.com" className="hover:text-white">admin@edodeltanad.com</a>
             </li>
             <li className="flex items-center gap-3">
               <FaPhone className="text-primary" />
