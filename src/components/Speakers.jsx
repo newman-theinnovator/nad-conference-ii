@@ -84,9 +84,9 @@ const Speakers = () => {
     {
       image: ogunborExcel,
       name: "Dr. Ogunbor Excel",
-      title: "Dermatologist",
+      title: "Consultant Physician / Dermatologist and Genitourinary Specialist",
       role: "University of Benin Teaching Hospital",
-      subRole: "Visiting Consultant"
+      subRole: null
     }
   ];
 
