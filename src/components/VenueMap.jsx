@@ -1,5 +1,5 @@
-import React from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import React, { useState } from 'react';
+import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
 
 const containerStyle = {
   width: '100%',
@@ -7,12 +7,21 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 6.334986,
-  lng: 5.603746
+  lat: 6.298288,
+  lng: 5.609797
 };
 
 const VenueMap = () => {
-  const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || ''; // Handle missing key gracefully in dev if needed
+  const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || '';
+  const [infoOpen, setInfoOpen] = useState(true); // Set to true for auto-open; false for on-click only
+
+  const handleMarkerClick = () => {
+    setInfoOpen(true);
+  };
+
+  const handleInfoClose = () => {
+    setInfoOpen(false);
+  };
 
   return (
     <section className="py-20 bg-white" id="venue">
@@ -24,8 +33,31 @@ const VenueMap = () => {
       <div className="w-full h-[450px] relative bg-gray-200">
         {apiKey ? (
           <LoadScript googleMapsApiKey={apiKey}>
-            <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={14}>
-              <Marker position={center} />
+            <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={16}>
+              <Marker
+                position={center}
+                title="Cathelea Convention and Suites"  // Simple hover tooltip
+                onClick={handleMarkerClick}  // Opens InfoWindow on click
+              />
+              {infoOpen && (
+                <InfoWindow
+                  position={center}
+                  onCloseClick={handleInfoClose}
+                >
+                  <div className="p-2">
+                    <h4 className="font-bold text-secondary">Cathelea Convention and Suites</h4>
+                    <p className="text-sm text-gray-600">2 Aiyanyo Omoigui Street, off 2nd Ugbor Road, GRA, Benin City, Edo State</p>
+                    <a
+                      href="https://maps.app.goo.gl/KnyRZ3FA7V7TvKpk6"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary font-bold text-sm hover:underline"
+                    >
+                      View on Google Maps →
+                    </a>
+                  </div>
+                </InfoWindow>
+              )}
             </GoogleMap>
           </LoadScript>
         ) : (
@@ -44,7 +76,7 @@ const VenueMap = () => {
             Located in the G.R.A, easily accessible from Benin Airport (BNI).
           </p>
           <a
-            href={`https://www.google.com/maps/search/?api=1&query=${center.lat},${center.lng}`}
+            href="https://maps.app.goo.gl/KnyRZ3FA7V7TvKpk6"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary font-bold text-sm hover:underline"
