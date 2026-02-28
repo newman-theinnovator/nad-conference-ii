@@ -1,5 +1,12 @@
 import React from 'react';
 
+const sponsorsList = [
+  { id: 1, name: 'Eucerin', logo: '/eucerin.png' },
+  { id: 2, name: 'Sponsor 2', logo: null },
+  { id: 3, name: 'Sponsor 3', logo: null },
+  { id: 4, name: 'Sponsor 4', logo: null },
+];
+
 const Sponsors = () => {
   return (
     <section className="py-20 px-6 bg-slate-50" id="sponsors">
@@ -10,10 +17,13 @@ const Sponsors = () => {
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 opacity-60 hover:opacity-100 transition-opacity duration-300">
-          {/* Placeholders for logos */}
-          {[1, 2, 3, 4].map((i) => (
-            <div key={i} className="h-24 bg-white rounded-lg shadow-sm border border-gray-100 flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all">
-              <span className="text-gray-400 font-bold text-xl uppercase">Sponsor {i}</span>
+          {sponsorsList.map((sponsor) => (
+            <div key={sponsor.id} className="h-24 bg-white rounded-lg shadow-sm border border-gray-100 flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all">
+              {sponsor.logo ? (
+                <img src={sponsor.logo} alt={sponsor.name} className="max-h-full max-w-full object-contain" />
+              ) : (
+                <span className="text-gray-400 font-bold text-xl uppercase">{sponsor.name}</span>
+              )}
             </div>
           ))}
         </div>
