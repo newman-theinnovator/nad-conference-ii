@@ -16,9 +16,9 @@ const Sponsors = () => {
           We are proud to partner with leading organizations committed to advancing dermatology and global health.
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 opacity-60 hover:opacity-100 transition-opacity duration-300">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 md:opacity-60 md:hover:opacity-100 transition-opacity duration-300">
           {sponsorsList.map((sponsor) => (
-            <div key={sponsor.id} className="h-24 bg-white rounded-lg shadow-sm border border-gray-100 flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all">
+            <div key={sponsor.id} className="h-24 bg-white rounded-lg shadow-sm border border-gray-100 flex items-center justify-center p-4 md:grayscale md:hover:grayscale-0 transition-all">
               {sponsor.logo ? (
                 <img src={sponsor.logo} alt={sponsor.name} className="max-h-full max-w-full object-contain" />
               ) : (
