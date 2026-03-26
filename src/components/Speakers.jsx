@@ -5,6 +5,8 @@ import sebastineOiwoh from '../assets/sebastine-oiwoh.jpg';
 import olumayowaOninla from '../assets/olumayowa-oninla.jpg';
 import nkirukaOnodugo from '../assets/nkiruka-onodugo.jpg';
 import ogunborExcel from '../assets/ogunbor-excel.jpg';
+import nwoseJephthah from '../assets/nwose-jephthah.jpg';
+import aishaSokunbi from '../assets/aisha-sokunbi.jpg';
 
 const SpeakerCard = ({ image, name, title, role, subRole }) => (
   <div className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col h-full">
@@ -87,6 +89,20 @@ const Speakers = () => {
       title: "Consultant Physician / Dermatologist and Genitourinary Specialist",
       role: "University of Benin Teaching Hospital",
       subRole: null
+    },
+    {
+      image: nwoseJephthah,
+      name: "Dr. Nwose Jephthah Junior",
+      title: "MB.BS (Benin), B.SC Hons (Calabar), FWACP",
+      role: "Federal Medical Centre, Asaba. Special interest in Dermatology.",
+      subRole: null
+    },
+    {
+      image: aishaSokunbi,
+      name: "Dr. Aisha Sokunbi",
+      title: "FWACP",
+      role: "Consultant Dermatologist, UBTH",
+      subRole: "Edo/Delta NAD Secretary"
     }
   ];
 
