@@ -94,16 +94,6 @@ const Agenda = () => {
             </ul>
           </div>
         </div>
-
-        <div className="text-center mt-12">
-          <a
-            href="/nad2026-agenda.pdf"
-            download
-            className="inline-block px-8 py-3 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-white transition-colors duration-300"
-          >
-            Download Full Agenda (PDF)
-          </a>
-        </div>
       </div>
     </section>
   );

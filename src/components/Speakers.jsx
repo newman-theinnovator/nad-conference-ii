@@ -8,6 +8,7 @@ import ogunborExcel from '../assets/ogunbor-excel.jpg';
 import nwoseJephthah from '../assets/nwose-jephthah.jpg';
 import aishaSokunbi from '../assets/aisha-sokunbi.jpg';
 import obasiKevwie from '../assets/obasi-kevwie.jpg';
+import christabelOvesour from '../assets/christabel-ovesour.jpg';
 
 const SpeakerCard = ({ image, name, title, role, subRole }) => (
   <div className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col h-full">
@@ -109,8 +110,15 @@ const Speakers = () => {
       image: obasiKevwie,
       name: "Dr. Obasi Kevwie Becky",
       title: "Consultant Dermatologist/Physician",
-      role: "DELSUTH, Oghara",
+      role: "Delta State University Teaching Hospital, Oghara",
       subRole: "Welfare"
+    },
+    {
+      image: christabelOvesour,
+      name: "Dr. Christabel A. Ovesour",
+      title: "Consultant Physician and Dermatologist",
+      role: "Federal Medical Centre, Asaba",
+      subRole: "Fundraising committee"
     }
   ];
 
@@ -132,11 +140,20 @@ const Speakers = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-          {speakers.map((speaker, index) => (
-            <div key={index} data-aos="fade-up" data-aos-delay={index * 100}>
-              <SpeakerCard {...speaker} />
-            </div>
-          ))}
+          {speakers.map((speaker, index) => {
+            // If it's a 3-column grid and there's exactly 1 item in the last row, center it
+            const isLastRowSingleItem = speakers.length % 3 === 1 && index === speakers.length - 1;
+            return (
+              <div 
+                key={index} 
+                data-aos="fade-up" 
+                data-aos-delay={index * 100}
+                className={isLastRowSingleItem ? "lg:col-start-2" : ""}
+              >
+                <SpeakerCard {...speaker} />
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
