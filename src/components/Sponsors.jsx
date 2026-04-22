@@ -28,15 +28,7 @@ const Sponsors = () => {
           ))}
         </div>
 
-        <div className="bg-primary/5 rounded-2xl p-8 md:p-12">
-          <h4 className="text-2xl font-bold text-secondary mb-4">Interested in Sponsoring?</h4>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Connect with key decision makers and showcase your innovations to a targeted audience of dermatology professionals.
-          </p>
-          <button className="bg-secondary text-white px-8 py-3 rounded-full font-bold hover:bg-slate-800 transition-colors shadow-lg">
-            Download Sponsorship Kit
-          </button>
-        </div>
+
       </div>
     </section>
   );
