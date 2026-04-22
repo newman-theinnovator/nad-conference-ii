@@ -2,9 +2,9 @@ import React from 'react';
 
 const sponsorsList = [
   { id: 1, name: 'Eucerin', logo: '/eucerin.png' },
-  { id: 2, name: 'Sponsor 2', logo: null },
-  { id: 3, name: 'Sponsor 3', logo: null },
-  { id: 4, name: 'Sponsor 4', logo: null },
+  { id: 2, name: 'FAES FARMA', logo: 'https://commons.wikimedia.org/wiki/Special:FilePath/Faes_Farma_Logo.svg' },
+  { id: 3, name: 'OSWORTH HEALTHCARE', logo: '/osworth.png' },
+  { id: 4, name: 'SEBAMED', logo: 'https://commons.wikimedia.org/wiki/Special:FilePath/Sebamed.svg' },
 ];
 
 const Sponsors = () => {
