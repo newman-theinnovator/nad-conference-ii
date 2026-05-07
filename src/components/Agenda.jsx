@@ -5,7 +5,7 @@ const Agenda = () => {
     <section className="py-20 px-6 bg-white" id="agenda">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h3 className="text-3xl md:text-4xl font-bold mb-4 text-secondary">Event Schedule</h3>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-secondary">Event Schedule</h2>
           <p className="text-gray-600">A prelimary look at our 4-day scientific conference schedule.</p>
         </div>
 
@@ -13,7 +13,7 @@ const Agenda = () => {
           {/* Pre-Conference */}
           <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:border-primary transition-colors duration-300 relative overflow-hidden group">
             <div className="absolute top-0 right-0 bg-gray-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">PRE-CONF</div>
-            <h4 className="text-xl font-bold text-secondary mb-2">June 23rd</h4>
+            <h3 className="text-xl font-bold text-secondary mb-2">June 23rd</h3>
             <p className="text-accent font-semibold mb-4 text-sm">Pre-Conference Workshop</p>
             <ul className="space-y-2">
               <li className="flex items-start text-gray-700 text-sm">
@@ -34,7 +34,7 @@ const Agenda = () => {
           {/* Day 1 */}
           <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:border-primary transition-colors duration-300 relative overflow-hidden group">
             <div className="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg">DAY 1</div>
-            <h4 className="text-xl font-bold text-secondary mb-2">June 24th</h4>
+            <h3 className="text-xl font-bold text-secondary mb-2">June 24th</h3>
             <p className="text-accent font-semibold mb-4 text-sm">Closing the Care Gap</p>
             <ul className="space-y-2">
               <li className="flex items-start text-gray-700 text-sm">
@@ -55,7 +55,7 @@ const Agenda = () => {
           {/* Day 2 */}
           <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:border-primary transition-colors duration-300 relative overflow-hidden group">
             <div className="absolute top-0 right-0 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-bl-lg">DAY 2</div>
-            <h4 className="text-xl font-bold text-secondary mb-2">June 25th</h4>
+            <h3 className="text-xl font-bold text-secondary mb-2">June 25th</h3>
             <p className="text-accent font-semibold mb-4 text-sm">Aesthetics & Diagnostics</p>
             <ul className="space-y-2">
               <li className="flex items-start text-gray-700 text-sm">
@@ -76,7 +76,7 @@ const Agenda = () => {
           {/* Day 3 */}
           <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:border-primary transition-colors duration-300 relative overflow-hidden group">
             <div className="absolute top-0 right-0 bg-accent text-white text-xs font-bold px-3 py-1 rounded-bl-lg">DAY 3</div>
-            <h4 className="text-xl font-bold text-secondary mb-2">June 26th</h4>
+            <h3 className="text-xl font-bold text-secondary mb-2">June 26th</h3>
             <p className="text-accent font-semibold mb-4 text-sm">Business & AGM</p>
             <ul className="space-y-2">
               <li className="flex items-start text-gray-700 text-sm">

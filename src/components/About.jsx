@@ -1,5 +1,5 @@
 import React from 'react';
-import aboutImg from '../assets/new-about-conference.jpg';
+import aboutImg from '../assets/new-about-conference.webp';
 
 const About = () => {
   return (
@@ -8,7 +8,7 @@ const About = () => {
         {/* Image Side */}
         <div className="w-full md:w-1/2 relative" data-aos="fade-right">
           <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-            <img src={aboutImg} alt="Conference Audience" className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" />
+            <img src={aboutImg} alt="Conference Audience" loading="lazy" decoding="async" className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" />
             <div className="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
           </div>
           <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-accent/20 rounded-full blur-2xl"></div>
@@ -17,7 +17,7 @@ const About = () => {
 
         {/* Text Side */}
         <div className="w-full md:w-1/2 space-y-6" data-aos="fade-left">
-          <h3 className="text-secondary font-bold text-sm tracking-widest uppercase mb-2">About The Conference</h3>
+          <span className="block text-secondary font-bold text-sm tracking-widest uppercase mb-2">About The Conference</span>
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 leading-tight">
             Advancing Dermatology in <span className="text-primary">Nigeria</span>
           </h2>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
-import nadLogo from '../assets/nad-logo.jpg';
+import nadLogo from '../assets/nad-logo.webp';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

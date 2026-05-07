@@ -1,22 +1,24 @@
 import React from 'react';
-import bensonOkwara from '../assets/benson-okwara.jpg';
-import cynthiaMadubuko from '../assets/cynthia-madubuko.jpg';
-import sebastineOiwoh from '../assets/sebastine-oiwoh.jpg';
-import olumayowaOninla from '../assets/olumayowa-oninla.jpg';
-import nkirukaOnodugo from '../assets/nkiruka-onodugo.jpg';
-import ogunborExcel from '../assets/ogunbor-excel.jpg';
-import nwoseJephthah from '../assets/nwose-jephthah.jpg';
-import aishaSokunbi from '../assets/aisha-sokunbi.jpg';
-import obasiKevwie from '../assets/obasi-kevwie.jpg';
-import christabelOvesour from '../assets/christabel-ovesour.jpg';
+import bensonOkwara from '../assets/benson-okwara.webp';
+import cynthiaMadubuko from '../assets/cynthia-madubuko.webp';
+import sebastineOiwoh from '../assets/sebastine-oiwoh.webp';
+import olumayowaOninla from '../assets/olumayowa-oninla.webp';
+import nkirukaOnodugo from '../assets/nkiruka-onodugo.webp';
+import ogunborExcel from '../assets/ogunbor-excel.webp';
+import nwoseJephthah from '../assets/nwose-jephthah.webp';
+import aishaSokunbi from '../assets/aisha-sokunbi.webp';
+import obasiKevwie from '../assets/obasi-kevwie.webp';
+import christabelOvesour from '../assets/christabel-ovesour.webp';
 
-const SpeakerCard = ({ image, name, title, role, subRole }) => (
+const SpeakerCard = ({ image, name, title, role, subRole, bio }) => (
   <div className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col h-full">
     {/* Image Container with improved aspect ratio handling */}
     <div className="aspect-[3/4] overflow-hidden relative">
       <img
         src={image}
         alt={name}
+        loading="lazy"
+        decoding="async"
         className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
       />
       {/* Subtle overlay gradient at the bottom for better transitions if needed, though clean is better here */}
@@ -28,13 +30,18 @@ const SpeakerCard = ({ image, name, title, role, subRole }) => (
       {/* Decorative Top Border on Content - adds a premium touch */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-1 bg-accent rounded-b-full shadow-sm"></div>
 
-      <h4 className="text-xl font-bold text-secondary mt-3 mb-1 font-heading leading-tight">{name}</h4>
+      <h3 className="text-xl font-bold text-secondary mt-3 mb-1 font-heading leading-tight">{name}</h3>
       <p className="text-primary font-medium text-sm mb-4">{title}</p>
 
       {/* Divider */}
       <div className="w-16 h-px bg-slate-200 mx-auto mb-4"></div>
 
-      <p className="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">{role}</p>
+      <p className="text-slate-800 font-medium text-sm leading-relaxed mb-2">{role}</p>
+      {bio && (
+        <p className="text-slate-500 text-xs leading-relaxed mb-4 flex-grow line-clamp-3 group-hover:line-clamp-none transition-all duration-300 text-left">
+          {bio}
+        </p>
+      )}
 
       {/* Badge Container */}
       <div className="mt-auto pt-2">
@@ -55,70 +62,80 @@ const Speakers = () => {
       name: "Dr. Benson Okwara",
       title: "MBBS, FMCP",
       role: "University of Benin Teaching Hospital",
-      subRole: "Chairman (LOC)"
+      subRole: "Chairman (LOC)",
+      bio: "Leading expert in modern dermatology treatments, presenting innovations at the NAD 2026 conference. Spearheads research on the prevention of skin diseases across Nigerian cohorts."
     },
     {
       image: cynthiaMadubuko,
       name: "Prof Cynthia Madubuko",
       title: "MBBS, FWACP, FMCP",
       role: "University of Benin Teaching Hospital, Edo State",
-      subRole: null
+      subRole: null,
+      bio: "Renowned Nigerian dermatologist known for advanced therapies in chronic skin conditions. Her visionary work significantly impacts the global health policy on dermatological care."
     },
     {
       image: sebastineOiwoh,
       name: "Dr. Sebastine Oiwoh",
       title: "MBBS, FWACP",
       role: "Irrua Specialist Teaching Hospital / AAU Ekpoma",
-      subRole: "Scientific Committee"
+      subRole: "Scientific Committee",
+      bio: "Specializing in tropical infectious dermatoses. Evaluates abstract submissions and establishes the clinical guidelines for the Nigerian dermatologists conference 2026."
     },
     {
       image: olumayowaOninla,
       name: "Dr. Olumayowa Oninla",
       title: "Consultant Dermatologist",
       role: "OAUTHC & Associate Professor, OAU, Ile-Ife",
-      subRole: "Vice President 2"
+      subRole: "Vice President 2",
+      bio: "Academic leader providing key insights into therapeutic dermatology and cosmetic procedures in Nigeria, advocating for evidence-based treatments of skin diseases."
     },
     {
       image: nkirukaOnodugo,
       name: "Dr. Nkiruka Onodugo",
       title: "Consultant Dermatologist",
       role: "University of Nigeria Teaching Hospital, Enugu",
-      subRole: "Asst Secretary"
+      subRole: "Asst Secretary",
+      bio: "Expert in pediatric dermatology and inflammatory skin disorders. A pivotal speaker at NAD 2026 on strengthening dermatological care across local Nigerian communities."
     },
     {
       image: ogunborExcel,
       name: "Dr. Ogunbor Excel",
       title: "Consultant Physician / Dermatologist and Genitourinary Specialist",
       role: "University of Benin Teaching Hospital",
-      subRole: null
+      subRole: null,
+      bio: "Brings extensive experience treating complex genitourinary conditions and associated cutaneous manifestations, a key topic at this year's top Nigerian dermatologists conference."
     },
     {
       image: nwoseJephthah,
       name: "Dr. Nwose Jephthah Junior",
       title: "MB.BS (Benin), B.SC Hons (Calabar), FWACP",
       role: "Federal Medical Centre, Asaba. Special interest in Dermatology.",
-      subRole: null
+      subRole: null,
+      bio: "Focuses on systemic disease skin manifestations and early prevention strategies, highlighting cost-effective dermatology solutions for resource-limited settings."
     },
     {
       image: aishaSokunbi,
       name: "Dr. Aisha Sokunbi",
       title: "FWACP",
       role: "Consultant Dermatologist, UBTH",
-      subRole: "Edo/Delta NAD Secretary"
+      subRole: "Edo/Delta NAD Secretary",
+      bio: "Coordinates the scientific programming and workshops, advancing knowledge transfer and skill acquisition among attendees at the upcoming NAD 2026 conference."
     },
     {
       image: obasiKevwie,
       name: "Dr. Obasi Kevwie Becky",
       title: "Consultant Dermatologist/Physician",
       role: "Delta State University Teaching Hospital, Oghara",
-      subRole: "Welfare"
+      subRole: "Welfare",
+      bio: "Promotes holistic patient wellness and the psychological impact of skin diseases, advocating for comprehensive care models in contemporary Nigerian dermatology."
     },
     {
       image: christabelOvesour,
       name: "Dr. Christabel A. Ovesour",
       title: "Consultant Physician and Dermatologist",
       role: "Federal Medical Centre, Asaba",
-      subRole: "Fundraising committee"
+      subRole: "Fundraising committee",
+      bio: "Instrumental in expanding access to dermatological treatments in rural sectors. Her work focuses on sustainable interventions against prevalent and emerging skin diseases."
     }
   ];
 
@@ -133,7 +150,7 @@ const Speakers = () => {
           <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-3">
             World-Class Experts
           </span>
-          <h3 className="text-3xl md:text-5xl font-bold mb-6 text-secondary font-heading">Distinguished Speakers</h3>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-secondary font-heading">Distinguished Speakers</h2>
           <p className="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed">
             Meet the visionaries and leading experts driving the future of dermatology and global health care.
           </p>

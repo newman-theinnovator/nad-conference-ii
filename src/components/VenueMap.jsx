@@ -26,7 +26,7 @@ const VenueMap = () => {
   return (
     <section className="py-20 bg-white" id="venue">
       <div className="max-w-7xl mx-auto px-6 mb-8 text-center">
-        <h3 className="text-3xl font-bold mb-4 text-secondary">Conference Venue</h3>
+        <h2 className="text-3xl font-bold mb-4 text-secondary">Conference Venue</h2>
         <p className="text-gray-600">CATHELEA CONVENTION AND SUITES, Benin City</p>
       </div>
 
@@ -45,7 +45,7 @@ const VenueMap = () => {
                   onCloseClick={handleInfoClose}
                 >
                   <div className="p-2">
-                    <h4 className="font-bold text-secondary">Cathelea Convention and Suites</h4>
+                    <h3 className="font-bold text-secondary">Cathelea Convention and Suites</h3>
                     <p className="text-sm text-gray-600">2 Aiyanyo Omoigui Street, off 2nd Ugbor Road, GRA, Benin City, Edo State</p>
                     <a
                       href="https://maps.app.goo.gl/KnyRZ3FA7V7TvKpk6"
@@ -71,7 +71,7 @@ const VenueMap = () => {
 
         {/* Directions Overlay Card */}
         <div className="absolute bottom-6 left-6 bg-white p-6 rounded-xl shadow-2xl max-w-sm hidden md:block border-l-4 border-primary">
-          <h4 className="font-bold text-secondary mb-2">Getting Here</h4>
+          <h3 className="font-bold text-secondary mb-2">Getting Here</h3>
           <p className="text-sm text-gray-600 mb-4">
             Located in the G.R.A, easily accessible from Benin Airport (BNI).
           </p>
